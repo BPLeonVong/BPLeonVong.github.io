@@ -422,6 +422,7 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
   
+  //Returns a percentage value dependant on what the pizza slider is currently on
   function GetPizzaSize() {
 	 switch(newPizzeSize) {
       case "Small":
@@ -440,6 +441,7 @@ var resizePizzas = function(size) {
 	var AllThePizzas = document.querySelectorAll(".randomPizzaContainer");
 	var newWidth = GetPizzaSize();
 	
+	//Batch change all the locations
 	for(var i = 0; i < AllThePizzas.length; i++) {
 		AllThePizzas[i].style.width = newWidth;
 	}
@@ -501,6 +503,7 @@ function updatePositions() {
     itemLeftArray[i] = items[i].basicLeft + 100 * phase + 'px';
   }
   
+  //Batch Change
   for (var i = 0; i < items.length; i++) {
     items[i].style.left = itemLeftArray[i];
   }
