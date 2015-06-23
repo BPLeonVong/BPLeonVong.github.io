@@ -1,7 +1,7 @@
 ## Website Performance Optimization portfolio project
 
 ### About
-This project was to optimize Cameron Pittman's portfolio page() and get it to a high score on Page Speed Insights and run at 60 frames per second using techniques learned from Udacity.
+This project was to optimize Cameron Pittman's portfolio page(http://cameronwp.github.io/udportfolio/) and get it to a high score on Page Speed Insights and run at 60 frames per second using techniques learned from Udacity.
 
 ### How to run
 You can download the repository and open index.html locally in a browser. You may also check this page out @ http://bpleonvong.github.io/ and use Page Speed Insights to check it out. https://developers.google.com/speed/pagespeed/
