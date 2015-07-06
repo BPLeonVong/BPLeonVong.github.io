@@ -1,0 +1,5455 @@
+﻿@charset "UTF-8";
+@font-face {
+    font-family: BLOKKRegular;
+    src: url(../../gFramework/assets/fonts/BLOKKRegular.eot);
+    src: url(../../gFramework/assets/fonts/BLOKKRegular.eot?#iefix) format("embedded-opentype"), url(../../gFramework/assets/fonts/BLOKKRegular.woff) format("woff"), url(../../gFramework/assets/fonts/BLOKKRegular.svg#BLOKKRegular) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+.no-transition {
+    transition-duration: 0s!important
+}
+#content-talks,
+#createjs_02 .panel_art,
+.bg-image-map,
+.createjs,
+.createjs_02_st .panel_art {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto
+}
+#gUtility {
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .5s;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    position: absolute;
+    top: 0;
+    left: calc(10rem);
+    right: calc(10rem);
+    z-index: 4000;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .8);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-100%) translateZ(0);
+    transform: translateY(-100%) translateZ(0)
+}
+#gUtility.in {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0)
+}
+.gUtility_output {
+    line-height: 0
+}
+.gUtility_title:first-child::before {
+    content: "@mixin bp( )";
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .5)
+}
+.gUtility_title {
+    margin: 0;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .66)
+}
+.gUtility_title::after {
+    content: attr(data-value);
+    display: inline-block;
+    padding: 0 1rem 0 4px;
+    color: #fff
+}
+.no-touch {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+    touch-action: none
+}
+.yes-touch {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    -ms-touch-action: all;
+    touch-action: all
+}
+* {
+    -webkit-tap-highlight-color: transparent
+}
+.no-contextMenu {
+    -webkit-touch-callout: none
+}
+.yes-contextMenu {
+    -webkit-touch-callout: default
+}
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block
+}
+audio,
+canvas,
+video {
+    display: inline-block
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+[hidden] {
+    display: none
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+a:focus {
+    outline: dotted thin
+}
+a:active,
+a:hover {
+    outline: 0
+}
+h1 {
+    font-size: 2em
+}
+abbr[title] {
+    border-bottom: 1px dotted
+}
+b,
+strong {
+    font-weight: 700
+}
+dfn {
+    font-style: italic
+}
+mark {
+    background: #ff0;
+    color: #000
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+small {
+    font-size: 80%
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+sup {
+    top: -.5em
+}
+sub {
+    bottom: -.25em
+}
+img {
+    border: 0
+}
+svg:not(:root) {
+    overflow: hidden
+}
+figure {
+    margin: 0
+}
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+legend {
+    border: 0;
+    padding: 0
+}
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+button,
+input {
+    line-height: normal
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+button[disabled],
+input[disabled] {
+    cursor: default
+}
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+@font-face {
+    font-family: regular-boldweb;
+    src: url(/site4/assets/fonts/regular-boldweb.eot);
+    src: local("‚ò∫"), url(/site4/assets/fonts/regular-boldweb.woff) format("woff"), url(/site4/assets/fonts/regular-boldweb.ttf) format("truetype");
+    font-weight: 700;
+    font-style: bold
+}
+@font-face {
+    font-family: regular-bookweb;
+    src: url(/site4/assets/fonts/regular-bookweb.eot);
+    src: local("‚ò∫"), url(/site4/assets/fonts/regular-bookweb.woff) format("woff"), url(/site4/assets/fonts/regular-bookweb.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+#about_01 .panel_heading,
+#atari_01 .panel_heading,
+#createjs_01 .panel_heading,
+#home_01 .panel_heading,
+#rdiofxos_01 .panel_heading,
+.about_01_st .panel_heading,
+.atari_01_st .panel_heading,
+.createjs_01_st .panel_heading,
+.home_01_st .panel_heading,
+.rdiofxos_01_st .panel_heading {
+    font: 400 3.6em/80% regular-bookweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -1px;
+    margin: 0 0 1rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 3.5em/80% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 600px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 4em/80% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 5.4em/80% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 6em/80% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 7em/80% regular-bookweb, sans-serif;
+        padding-bottom: 1rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    #about_01 .panel_heading,
+    #atari_01 .panel_heading,
+    #createjs_01 .panel_heading,
+    #home_01 .panel_heading,
+    #rdiofxos_01 .panel_heading,
+    .about_01_st .panel_heading,
+    .atari_01_st .panel_heading,
+    .createjs_01_st .panel_heading,
+    .home_01_st .panel_heading,
+    .rdiofxos_01_st .panel_heading {
+        font: 400 8em/80% regular-bookweb, sans-serif
+    }
+}
+.carousel_panel-viewport .carousel_panel-content .panel_heading,
+.errorPageHeading,
+.panel_heading {
+    font: 400 3.4em/90% regular-bookweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -1px;
+    margin: 0 0 1rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 2.8em/90% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 600px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 3.6em/90% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 4.2em/90% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 4.6em/90% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 5.2em/90% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .carousel_panel-viewport .carousel_panel-content .panel_heading,
+    .errorPageHeading,
+    .panel_heading {
+        font: 400 5.6em/90% regular-bookweb, sans-serif
+    }
+}
+.panel_subheading {
+    font: 700 2.2em/100% regular-boldweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    margin: 0 0 1rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .panel_subheading {
+        font: 400 2em/100% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    .panel_subheading {
+        font: 400 2.8em/100% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .panel_subheading {
+        font: 400 3em/100% regular-bookweb, sans-serif
+    }
+}
+#atari_01 .panel_misc,
+#iss_01 .panel_misc,
+#rdiofxos_01 .panel_misc,
+.atari_01_st .panel_misc,
+.iss_01_st .panel_misc,
+.rdiofxos_01_st .panel_misc {
+    font: 400 1.4em/120% regular-bookweb, sans-serif;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-rendering: optimizeLegibility;
+    margin: 0 0 1rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_01 .panel_misc,
+    #iss_01 .panel_misc,
+    #rdiofxos_01 .panel_misc,
+    .atari_01_st .panel_misc,
+    .iss_01_st .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        font: 400 1.4em/120% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_01 .panel_misc,
+    #iss_01 .panel_misc,
+    #rdiofxos_01 .panel_misc,
+    .atari_01_st .panel_misc,
+    .iss_01_st .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        font: 400 1.8em/120% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    #atari_01 .panel_misc,
+    #iss_01 .panel_misc,
+    #rdiofxos_01 .panel_misc,
+    .atari_01_st .panel_misc,
+    .iss_01_st .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        font: 400 2em/120% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    #atari_01 .panel_misc,
+    #iss_01 .panel_misc,
+    #rdiofxos_01 .panel_misc,
+    .atari_01_st .panel_misc,
+    .iss_01_st .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        font: 400 2.2em/120% regular-bookweb, sans-serif
+    }
+}
+.errorPageMessage,
+.panel_description,
+.panel_misc,
+p {
+    font: 400 1.8em/120% regular-bookweb, sans-serif;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    text-rendering: optimizeLegibility;
+    margin: 0 0 1rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .errorPageMessage,
+    .panel_description,
+    .panel_misc,
+    p {
+        font: 400 2em/128% regular-bookweb, sans-serif
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .errorPageMessage,
+    .panel_description,
+    .panel_misc,
+    p {
+        font: 400 2.2em/128% regular-bookweb, sans-serif
+    }
+}
+#footer_contactInfo .footer-address,
+#footer_contactInfo .footer-phone,
+#footer_copyright_text,
+.footer_link {
+    font: 400 1.8em/100% regular-bookweb, sans-serif;
+    text-rendering: optimizeLegibility
+}
+.footer_link {
+    text-transform: uppercase;
+    text-decoration: none
+}
+#footer_contactInfo .footer-address p {
+    font: 400 1.8em/1.6em regular-bookweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    text-decoration: none
+}
+#footer_contactInfo .footer-worldwide {
+    font: 400 1.6em/1.6em regular-bookweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    text-decoration: none
+}
+.carousel_next-button::before,
+.carousel_prev-button::after {
+    font: 700 1.8em/2.3em regular-boldweb, sans-serif;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 1rem
+}
+#gLogo-footer,
+#gLogo-header {
+    will-change: width;
+    transition-property: width;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: 0;
+    transition-delay: 0;
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    height: 3rem;
+    width: 14.2rem
+}
+.mini#gLogo-footer,
+.mini#gLogo-header {
+    transition-delay: .1s;
+    width: 3rem
+}
+.gLogo_g {
+    will-change: transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .5s;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    fill: #3c3c3c
+}
+.gLogo_skinner,
+.gLogo_skinnerWrap {
+    position: absolute;
+    right: 0;
+    height: 3rem;
+    width: 11.2rem;
+    fill: #3c3c3c
+}
+.gLogo_skinnerWrap {
+    will-change: opacity, transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-timing-function: linear, cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .1s, .5s;
+    transition-delay: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 2.9rem;
+    opacity: 1;
+    -webkit-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0)
+}
+.gLogo_skinnerWrap.out {
+    transition-delay: 0s, .3s;
+    transition-duration: .1s, 0s;
+    opacity: 0;
+    -webkit-transform: translateY(-300%) translateZ(0);
+    transform: translateY(-300%) translateZ(0)
+}
+#gLogo-header {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 3000
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #gLogo-header {
+        top: 1.5rem;
+        left: 1.5rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) and (max-width: 600px) {
+    #gLogo-header {
+        transition-delay: .1s;
+        width: 3rem
+    }
+    #gLogo-header .gLogo_skinnerWrap {
+        transition-delay: 0, .1s;
+        transition-duration: .1s;
+        opacity: 0;
+        -webkit-transform: translateY(-300%) translateZ(0);
+        transform: translateY(-300%) translateZ(0)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    #gLogo-header {
+        top: 3rem;
+        left: 3rem
+    }
+}
+* {
+    box-sizing: border-box
+}
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.1),
+(min--moz-min-device-pixel-ratio: 1.1),
+(-o-min-device-pixel-ratio: 1.1),
+(min-device-pixel-ratio: 1.1),
+(min-resolution: 1.1dppx) {
+    html {
+        -webkit-font-smoothing: subpixel-antialiased
+    }
+}
+body {
+    transition: background .1s cubic-bezier(0.22, .88, .01, .99);
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    font-family: regular-bookweb, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    background-color: #a3a3a3
+}
+a:hover {
+    cursor: pointer
+}
+#footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 4rem 3rem;
+    background-color: #101010;
+    opacity: 0
+}
+#footer.in {
+    opacity: 1
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #footer {
+        padding: 5rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #footer {
+        padding: 6rem 5%
+    }
+}
+.footer_col {
+    position: relative;
+    height: 100%;
+    float: left;
+    width: auto;
+    margin-right: 3rem;
+    margin-bottom: 2rem
+}
+@media screen and (min-width: 680px) {
+    .footer_col {
+        margin-bottom: 0
+    }
+}
+#footer_cta {
+    float: none;
+    width: 100%;
+    margin-bottom: 2rem
+}
+@media screen and (min-width: 760px) {
+    #footer_cta {
+        float: left;
+        width: auto
+    }
+}
+#gLogo-footer .gLogo_g,
+#gLogo-footer .gLogo_skinner {
+    fill: #fff
+}
+#gLogo-footer::before {
+    display: none
+}
+#gLogo-footer:hover::before {
+    border-color: #fff
+}
+#footer_button {
+    margin-top: 2rem;
+    color: #fff;
+    height: 4rem!important;
+    line-height: 4rem!important
+}
+#footer_button .button-default::before {
+    border-color: #fff
+}
+#footer_button .button_icon-arrow::after,
+#footer_button .button_icon-arrow::before {
+    background-color: #fff
+}
+@media screen and (min-width: 760px) {
+    #footer_button {
+        margin-bottom: 0
+    }
+}
+#footer_links {
+    width: auto
+}
+.footer_link,
+.footer_link_icon {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    position: relative;
+    -webkit-transform: translateX(0) translateZ(0);
+    transform: translateX(0) translateZ(0)
+}
+.footer_link {
+    display: block;
+    margin-bottom: 2.9rem;
+    width: 30%;
+    white-space: nowrap;
+    color: #fff;
+    opacity: 1;
+    outline: 0!important
+}
+.footer_link:hover {
+    opacity: 1
+}
+.footer_link:last-child {
+    margin-bottom: 0
+}
+#footer_contactInfo .footer-address,
+#footer_contactInfo .footer-phone {
+    transition-property: color, -webkit-transform;
+    transition-property: color, transform;
+    transition-duration: .3s;
+    transition-timing-function: linear, cubic-bezier(0.22, .88, .01, .99);
+    display: inline-block;
+    position: relative;
+    color: #a3a3a3;
+    text-decoration: none;
+    opacity: .8
+}
+#footer_contactInfo .footer-phone {
+    margin-bottom: 1.5rem;
+    line-height: 2rem;
+    width: 50%;
+    white-space: nowrap;
+    outline: 0!important
+}
+#footer_contactInfo .footer-phone:hover {
+    opacity: 1
+}
+@media screen and (min-width: 470px) {
+    #footer_contactInfo .footer-phone {
+        margin-bottom: .5rem
+    }
+}
+#footer_contactInfo .footer-worldwide {
+    color: #fff
+}
+#footer_contactInfo .footer-address p {
+    color: inherit;
+    font-size: 100%;
+    line-height: 1.2em
+}
+#footer_copyright {
+    width: 100%;
+    float: left;
+    margin-top: 0;
+    margin-right: 0
+}
+@media screen and (min-width: 620px) {
+    #footer_copyright {
+        position: absolute;
+        width: auto;
+        margin-top: 9.6rem;
+        right: 5rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #footer_copyright {
+        right: 5%
+    }
+}
+#footer_copyright_text {
+    margin-bottom: 0;
+    font-size: 1.4em;
+    color: #a3a3a3
+}
+.carousel_next,
+.carousel_prev {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff
+}
+.carousel_next:hover,
+.carousel_prev:hover {
+    cursor: pointer
+}
+.carousel_next:hover .carousel_next-button,
+.carousel_prev:hover .carousel_next-button {
+    -webkit-transform: translateX(100%) translateY(-50%) translateZ(0);
+    transform: translateX(100%) translateY(-50%) translateZ(0)
+}
+.carousel_next:hover .carousel_prev-button,
+.carousel_prev:hover .carousel_prev-button {
+    -webkit-transform: translateX(-100%) translateY(-50%) translateZ(0);
+    transform: translateX(-100%) translateY(-50%) translateZ(0)
+}
+.carousel_next.touch:hover .carousel_next-button,
+.carousel_prev.touch:hover .carousel_next-button {
+    -webkit-transform: translateX(100%) translateY(-50%) translateZ(0);
+    transform: translateX(100%) translateY(-50%) translateZ(0)
+}
+.carousel_next.touch:hover .carousel_prev-button,
+.carousel_prev.touch:hover .carousel_prev-button {
+    -webkit-transform: translateX(-100%) translateY(-50%) translateZ(0);
+    transform: translateX(-100%) translateY(-50%) translateZ(0)
+}
+@media screen and (max-aspect-ratio: 3 / 4) {
+    .carousel_next,
+    .carousel_prev {
+        width: 50%;
+        height: auto;
+        padding-top: 60%
+    }
+}
+@media screen and (min-width: 800px) {
+    .carousel_next,
+    .carousel_prev {
+        width: 33%
+    }
+    .carousel_next:hover .carousel_next-button,
+    .carousel_next:hover .carousel_prev-button,
+    .carousel_prev:hover .carousel_next-button,
+    .carousel_prev:hover .carousel_prev-button {
+        -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+        transform: translateX(0) translateY(-50%) translateZ(0)
+    }
+    .carousel_next:hover .carousel_next-button::after,
+    .carousel_next:hover .carousel_next-button::before,
+    .carousel_next:hover .carousel_prev-button::after,
+    .carousel_next:hover .carousel_prev-button::before,
+    .carousel_prev:hover .carousel_next-button::after,
+    .carousel_prev:hover .carousel_next-button::before,
+    .carousel_prev:hover .carousel_prev-button::after,
+    .carousel_prev:hover .carousel_prev-button::before {
+        opacity: 1
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    .carousel_next,
+    .carousel_prev {
+        max-width: 5%
+    }
+}
+.carousel_next {
+    right: 0
+}
+.carousel_prev {
+    left: 0
+}
+.mouseUI .carousel_next,
+.mouseUI .carousel_prev {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%)
+}
+.carousel_next-hint,
+.carousel_prev-hint {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 4rem;
+    margin-top: -2rem;
+    background-color: #3c3c3c
+}
+.carousel_next-hint::after,
+.carousel_next-hint::before,
+.carousel_prev-hint::after,
+.carousel_prev-hint::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - .5rem);
+    width: 1rem;
+    border-style: solid;
+    border-width: 0 0 .2rem;
+    border-color: inherit
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .carousel_next-hint,
+    .carousel_prev-hint {
+        width: 4rem
+    }
+}
+.carousel_prev-hint {
+    left: 0
+}
+.carousel_prev-hint::before {
+    -webkit-transform: scale(0.999) translate3d(0, .1rem, 1px) rotate(-45deg);
+    transform: scale(0.999) translate3d(0, .1rem, 1px) rotate(-45deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top
+}
+.carousel_prev-hint::after {
+    -webkit-transform: scale(0.999) translate3d(0, -.1rem, 1px) rotate(45deg);
+    transform: scale(0.999) translate3d(0, -.1rem, 1px) rotate(45deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom
+}
+.carousel_next-hint {
+    right: 0
+}
+.carousel_next-hint::before {
+    -webkit-transform: scale(0.999) translate3d(0, .1rem, 1px) rotate(45deg);
+    transform: scale(0.999) translate3d(0, .1rem, 1px) rotate(45deg);
+    -webkit-transform-origin: right top;
+    transform-origin: right top
+}
+.carousel_next-hint::after {
+    -webkit-transform: scale(0.999) translate3d(0, -.1rem, 1px) rotate(-45deg);
+    transform: scale(0.999) translate3d(0, -.1rem, 1px) rotate(-45deg);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom
+}
+.carousel_next-button,
+.carousel_prev-button {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    position: absolute;
+    top: 50%;
+    outline: 0;
+    height: 4rem;
+    background: #3c3c3c
+}
+.carousel_next-button::after,
+.carousel_next-button::before,
+.carousel_prev-button::after,
+.carousel_prev-button::before {
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    line-height: 40px;
+    opacity: 0
+}
+.carousel_next-button {
+    right: 0;
+    padding: 0 5rem 0 2rem;
+    -webkit-transform: translateX(100%) translateY(-50%) translateZ(0);
+    transform: translateX(100%) translateY(-50%) translateZ(0)
+}
+.carousel_next-button::before {
+    content: attr(data-label);
+    color: inherit;
+    white-space: nowrap
+}
+.carousel_prev-button {
+    left: 0;
+    padding: 0 2rem 0 5rem;
+    -webkit-transform: translateX(-100%) translateY(-50%) translateZ(0);
+    transform: translateX(-100%) translateY(-50%) translateZ(0)
+}
+.carousel_prev-button::after {
+    content: attr(data-label);
+    color: inherit;
+    white-space: nowrap
+}
+.carousel_pagination {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    padding-top: calc(60% + 1rem);
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    .carousel_pagination {
+        z-index: 3000
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    .carousel_pagination {
+        z-index: 1000
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .carousel_pagination {
+        z-index: 3000;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        padding: 1rem;
+        text-align: right
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 600px) {
+    .carousel_pagination {
+        padding: 0 2rem 2rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .carousel_pagination {
+        padding: 0 2rem 3rem 3rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .carousel_pagination {
+        width: 100%;
+        padding: 2rem 2rem 2rem 3rem;
+        text-align: center
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .carousel_pagination {
+        padding: 0 2rem 2rem
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1380px) {
+    .carousel_pagination {
+        padding: 0 3rem 2rem
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1640px) {
+    .carousel_pagination {
+        padding: 0 4rem 3rem
+    }
+}
+.carousel_pagination_item {
+    transition-property: -webkit-transform, background;
+    transition-property: transform, background;
+    transition-duration: .3s, .05s;
+    transition-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    position: relative;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: .2rem solid #3c3c3c;
+    background: #3c3c3c;
+    border-radius: 50%;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6)
+}
+.carousel_pagination_item:hover {
+    background: #3c3c3c;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8)
+}
+.carousel_pagination_item.selected {
+    background: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .carousel_pagination_item {
+        width: 1.8rem;
+        height: 1.8rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .carousel_pagination_item {
+        width: 2.2rem;
+        height: 2.2rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .carousel_pagination_item {
+        width: 2.6rem;
+        height: 2.6rem
+    }
+}
+.touch .carousel_pagination_item {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+    background: #3c3c3c
+}
+.touch .carousel_pagination_item:hover {
+    background: #3c3c3c;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4)
+}
+.touch .carousel_pagination_item.selected {
+    background: #fff;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5)
+}
+.carousel {
+    will-change: transform, opacity, height;
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .5s, .5s, .3s;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(6rem) translateZ(0) scale(0.9);
+    transform: translateY(6rem) translateZ(0) scale(0.9)
+}
+.carousel .panel_art {
+    margin-bottom: 4rem
+}
+.carousel.in {
+    -webkit-transform: translateY(0) translateZ(0) scale(1);
+    transform: translateY(0) translateZ(0) scale(1);
+    opacity: 1
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .carousel {
+        padding-top: 60%
+    }
+    .carousel .panel_art {
+        margin-bottom: 0
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .carousel {
+        padding-top: 50%
+    }
+}
+.carousel_panel-viewport {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    -webkit-transform: translateX(100%) translateZ(0);
+    transform: translateX(100%) translateZ(0)
+}
+.carousel_panel-viewport .carousel_panel-content {
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out, linear;
+    -webkit-transform: translateX(-100%) translateZ(0);
+    transform: translateX(-100%) translateZ(0)
+}
+.carousel_panel-viewport.prev {
+    -webkit-transform: translateX(100%) translateZ(0);
+    transform: translateX(100%) translateZ(0)
+}
+.carousel_panel-viewport.prev .carousel_panel-content {
+    -webkit-transform: translateX(-80%) translateZ(0);
+    transform: translateX(-80%) translateZ(0);
+    opacity: 1
+}
+.carousel_panel-viewport.current {
+    -webkit-transform: translateX(0) translateZ(0);
+    transform: translateX(0) translateZ(0)
+}
+.carousel_panel-viewport.current .carousel_panel-content {
+    -webkit-transform: translateX(0) translateZ(0);
+    transform: translateX(0) translateZ(0);
+    opacity: 1
+}
+.carousel_panel-viewport.next {
+    -webkit-transform: translateX(-100%) translateZ(0);
+    transform: translateX(-100%) translateZ(0)
+}
+.carousel_panel-viewport.next .carousel_panel-content {
+    -webkit-transform: translateX(80%) translateZ(0);
+    transform: translateX(80%) translateZ(0);
+    opacity: 1
+}
+.panel {
+    will-change: transform, opacity;
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .5s;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    -webkit-transform: translateY(6rem) translateZ(0) scale(0.9);
+    transform: translateY(6rem) translateZ(0) scale(0.9);
+    opacity: 0
+}
+.panel.in,
+.panel:first-child {
+    background-color: transparent;
+    -webkit-transform: translateY(0) translateZ(0) scale(1);
+    transform: translateY(0) translateZ(0) scale(1);
+    opacity: 1
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .panel {
+        padding-top: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .panel {
+        padding-top: 50%
+    }
+}
+#stickyText,
+.panel_copy {
+    width: calc(100% - 6rem);
+    will-change: transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    position: relative;
+    margin: 1rem auto 4rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #stickyText,
+    .panel_copy {
+        left: 5rem;
+        bottom: 2rem;
+        width: calc(70% - 6rem)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 600px) {
+    #stickyText,
+    .panel_copy {
+        bottom: 4rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    #stickyText,
+    .panel_copy {
+        left: 9rem;
+        bottom: 6rem;
+        width: 50%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #stickyText,
+    .panel_copy {
+        max-width: 46rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    #stickyText,
+    .panel_copy {
+        max-width: 60rem;
+        bottom: 7rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1640px) {
+    #stickyText,
+    .panel_copy {
+        max-width: 70rem
+    }
+}
+#stickyText .button-default,
+.panel_copy .button-default {
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: scale(1) translateZ(0) translateY(6rem);
+    transform: scale(1) translateZ(0) translateY(6rem)
+}
+#stickyText .button-default.in,
+.panel_copy .button-default.in {
+    opacity: 1;
+    -webkit-transform: scale(1) translateZ(0) translateY(0);
+    transform: scale(1) translateZ(0) translateY(0)
+}
+@media screen and (min-width: 540px) {
+    #stickyText .button-default,
+    .panel_copy .button-default {
+        width: auto
+    }
+}
+#stickyText>:last-child,
+.panel_copy>:last-child {
+    margin-bottom: 0
+}
+#stickyText>:last-child.button-default,
+.panel_copy>:last-child.button-default {
+    margin-top: 2rem
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #stickyText,
+    .panel_copy {
+        position: absolute;
+        margin: 0
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 600px) {
+    #stickyText,
+    .panel_copy {
+        bottom: 4rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    #stickyText,
+    .panel_copy {
+        left: 5%;
+        bottom: 10%;
+        width: 50%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    #stickyText,
+    .panel_copy {
+        max-width: 60rem
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1640px) {
+    #stickyText,
+    .panel_copy {
+        max-width: 70rem
+    }
+}
+.panel_description,
+.panel_heading,
+.panel_misc,
+.panel_subheading {
+    will-change: transform, opacity;
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: .5s;
+    transition-delay: 0s;
+    color: inherit;
+    opacity: 0;
+    -webkit-transform: translateY(6rem) translateZ(0);
+    transform: translateY(6rem) translateZ(0)
+}
+.panel_description.in,
+.panel_heading.in,
+.panel_misc.in,
+.panel_subheading.in {
+    opacity: 1;
+    -webkit-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0)
+}
+.panel_description {
+    width: 95%
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .panel_description {
+        width: 90%
+    }
+}
+.panel_art {
+    will-change: opacity, transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.22, .88, .01, .99);
+    transition-duration: 1.4s;
+    transition-delay: 0s;
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    -webkit-transform: scale(0.95) translateZ(0);
+    transform: scale(0.95) translateZ(0);
+    opacity: 0
+}
+.panel_art.in {
+    opacity: 1;
+    -webkit-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0)
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .panel_art {
+        position: absolute;
+        padding-top: 0;
+        height: 100%
+    }
+}
+#about_01 .panel_art,
+#about_02 .panel_art,
+#about_03 .panel_art,
+#about_04 .panel_art,
+#atari_01 .panel_art,
+#atari_02 .panel_art,
+#atari_03 .panel_art,
+#atari_04 .panel_art,
+#atari_05 .panel_art,
+#atari_06 .panel_art,
+#atari_07 .panel_art,
+#createjs_01 .panel_art,
+#createjs_03 .panel_art,
+#createjs_04 .panel_art,
+#createjs_05 .panel_art,
+#createjs_06 .panel_art,
+#home_02a .panel_art,
+#home_02b .panel_art,
+#home_02c .panel_art,
+#home_02d .panel_art,
+#home_02e .panel_art,
+#home_03 .panel_art,
+#home_04 .panel_art,
+#iss_01 .panel_art,
+#iss_02 .panel_art,
+#iss_03 .panel_art,
+#iss_04 .panel_art,
+#iss_05 .panel_art,
+#iss_06 .panel_art,
+#rdiofxos_01 .panel_art,
+#rdiofxos_02 .panel_art,
+#rdiofxos_03 .panel_art,
+#rdiofxos_04 .panel_art,
+#technitone_01 .panel_art,
+#technitone_02 .panel_art,
+#technitone_03 .panel_art,
+#technitone_04a .panel_art,
+#technitone_04b .panel_art,
+#technitone_04c .panel_art,
+#technitone_04d .panel_art,
+#technitone_05 .noWebGL,
+.about_01_st .panel_art,
+.about_02_st .panel_art,
+.about_03_st .panel_art,
+.about_04_st .panel_art,
+.atari_01_st .panel_art,
+.atari_02_st .panel_art,
+.atari_03_st .panel_art,
+.atari_04_st .panel_art,
+.atari_05_st .panel_art,
+.atari_06_st .panel_art,
+.atari_07_st .panel_art,
+.createjs_01_st .panel_art,
+.createjs_03_st .panel_art,
+.createjs_04_st .panel_art,
+.createjs_05_st .panel_art,
+.createjs_06_st .panel_art,
+.home_02a_st .panel_art,
+.home_02b_st .panel_art,
+.home_02c_st .panel_art,
+.home_02d_st .panel_art,
+.home_02e_st .panel_art,
+.home_03_st .panel_art,
+.home_04_st .panel_art,
+.iss_01_st .panel_art,
+.iss_02_st .panel_art,
+.iss_03_st .panel_art,
+.iss_04_st .panel_art,
+.iss_05_st .panel_art,
+.iss_06_st .panel_art,
+.rdiofxos_01_st .panel_art,
+.rdiofxos_02_st .panel_art,
+.rdiofxos_03_st .panel_art,
+.rdiofxos_04_st .panel_art,
+.technitone_01_st .panel_art,
+.technitone_02_st .panel_art,
+.technitone_03_st .panel_art,
+.technitone_05_st .noWebGL {
+    background-repeat: no-repeat;
+    background-size: contain
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_01 .panel_art,
+    #about_02 .panel_art,
+    #about_03 .panel_art,
+    #about_04 .panel_art,
+    #atari_01 .panel_art,
+    #atari_02 .panel_art,
+    #atari_03 .panel_art,
+    #atari_04 .panel_art,
+    #atari_05 .panel_art,
+    #atari_06 .panel_art,
+    #atari_07 .panel_art,
+    #createjs_01 .panel_art,
+    #createjs_03 .panel_art,
+    #createjs_04 .panel_art,
+    #createjs_05 .panel_art,
+    #createjs_06 .panel_art,
+    #home_02a .panel_art,
+    #home_02b .panel_art,
+    #home_02c .panel_art,
+    #home_02d .panel_art,
+    #home_02e .panel_art,
+    #home_03 .panel_art,
+    #home_04 .panel_art,
+    #iss_01 .panel_art,
+    #iss_02 .panel_art,
+    #iss_03 .panel_art,
+    #iss_04 .panel_art,
+    #iss_05 .panel_art,
+    #iss_06 .panel_art,
+    #rdiofxos_01 .panel_art,
+    #rdiofxos_02 .panel_art,
+    #rdiofxos_03 .panel_art,
+    #rdiofxos_04 .panel_art,
+    #technitone_01 .panel_art,
+    #technitone_02 .panel_art,
+    #technitone_03 .panel_art,
+    #technitone_04a .panel_art,
+    #technitone_04b .panel_art,
+    #technitone_04c .panel_art,
+    #technitone_04d .panel_art,
+    #technitone_05 .noWebGL,
+    .about_01_st .panel_art,
+    .about_02_st .panel_art,
+    .about_03_st .panel_art,
+    .about_04_st .panel_art,
+    .atari_01_st .panel_art,
+    .atari_02_st .panel_art,
+    .atari_03_st .panel_art,
+    .atari_04_st .panel_art,
+    .atari_05_st .panel_art,
+    .atari_06_st .panel_art,
+    .atari_07_st .panel_art,
+    .createjs_01_st .panel_art,
+    .createjs_03_st .panel_art,
+    .createjs_04_st .panel_art,
+    .createjs_05_st .panel_art,
+    .createjs_06_st .panel_art,
+    .home_02a_st .panel_art,
+    .home_02b_st .panel_art,
+    .home_02c_st .panel_art,
+    .home_02d_st .panel_art,
+    .home_02e_st .panel_art,
+    .home_03_st .panel_art,
+    .home_04_st .panel_art,
+    .iss_01_st .panel_art,
+    .iss_02_st .panel_art,
+    .iss_03_st .panel_art,
+    .iss_04_st .panel_art,
+    .iss_05_st .panel_art,
+    .iss_06_st .panel_art,
+    .rdiofxos_01_st .panel_art,
+    .rdiofxos_02_st .panel_art,
+    .rdiofxos_03_st .panel_art,
+    .rdiofxos_04_st .panel_art,
+    .technitone_01_st .panel_art,
+    .technitone_02_st .panel_art,
+    .technitone_03_st .panel_art,
+    .technitone_05_st .noWebGL {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%
+    }
+}
+#home_01 .panel_art,
+#technitone_05 .panel_art,
+.home_01_st .panel_art,
+.technitone_05_st .panel_art {
+    text-align: center
+}
+#home_01 .panel_art img,
+#technitone_05 .panel_art img,
+.home_01_st .panel_art img,
+.technitone_05_st .panel_art img {
+    position: absolute
+}
+#home_01 .panel_art canvas,
+#technitone_05 .panel_art canvas,
+.home_01_st .panel_art canvas,
+.technitone_05_st .panel_art canvas {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_01 .panel_art,
+    #technitone_05 .panel_art,
+    .home_01_st .panel_art,
+    .technitone_05_st .panel_art {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -50%
+    }
+}
+.panel_spinner {
+    position: absolute;
+    left: 50%;
+    top: 20%
+}
+.panel_spinner.remove {
+    display: none
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .panel_spinner {
+        left: 66%;
+        top: 50%
+    }
+}
+#stickyText {
+    position: fixed;
+    pointer-events: none;
+    background: 0 0
+}
+#stickyText .button-default {
+    pointer-events: all
+}
+#stickyText.out {
+    display: none
+}
+.tsunami-content {
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .tsunami-content {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .tsunami-content {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .tsunami-content {
+        -webkit-transform: scale(1) translateY(-10%);
+        transform: scale(1) translateY(-10%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .tsunami-content {
+        -webkit-transform: scale(1) translateY(5%);
+        transform: scale(1) translateY(5%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    .tsunami-content {
+        -webkit-transform: scale(1.1) translateY(5%);
+        transform: scale(1.1) translateY(5%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1180px) {
+    .tsunami-content {
+        -webkit-transform: scale(1.3) translateY(15%);
+        transform: scale(1.3) translateY(15%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .tsunami-content {
+        -webkit-transform: scale(1.5) translateY(25%);
+        transform: scale(1.5) translateY(25%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1640px) {
+    .tsunami-content {
+        -webkit-transform: scale(1.8) translateY(25%);
+        transform: scale(1.8) translateY(25%)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 2000px) {
+    .tsunami-content {
+        -webkit-transform: scale(2) translateY(30%);
+        transform: scale(2) translateY(30%)
+    }
+}
+.tsunami {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+.tsunami::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    height: 20%;
+    background: linear-gradient(0deg, #efefef, rgba(239, 239, 239, 0));
+    z-index: 1000000000
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    .tsunami {
+        width: 100%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .tsunami {
+        width: 40%;
+        overflow: visible
+    }
+    .tsunami::after {
+        display: none
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    .tsunami {
+        width: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .tsunami {
+        width: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    .tsunami {
+        width: 55%
+    }
+}
+.tsunami-face {
+    left: 50%;
+    margin-left: -125px;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible
+}
+.donut {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+.donut::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 20%;
+    background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0));
+    z-index: 1000000000
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .donut {
+        width: 40%
+    }
+    .donut::after {
+        display: none
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    .donut {
+        width: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1380px) {
+    .donut {
+        width: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    .donut {
+        width: 55%
+    }
+}
+#donut-canvas {
+    position: absolute
+}
+.rdio-player {
+    width: 100%;
+    height: 100%
+}
+.rdio-ui {
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    width: 100%;
+    background-image: url(/site4/assets/images/caseStudy/rdio-assets/device-wireframe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%
+}
+@media screen and (min-width: 800px) {
+    .rdio-ui {
+        background-image: url(/site4/assets/images/caseStudy/rdio-assets/device-wireframe-2x.png)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .rdio-ui {
+        background-position: 95%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .rdio-ui {
+        background-position: 88.2%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .rdio-ui {
+        top: 6%;
+        bottom: 0
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    .rdio-ui {
+        background-position: 86.5%
+    }
+}
+.rdio-apps,
+.rdio-bright-apps {
+    transition: background 1s ease-out, opacity 1s;
+    position: absolute;
+    width: 100%;
+    background-image: url(/site4/assets/images/caseStudy/rdio-assets/album-strip.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 0 27.5%
+}
+@media screen and (min-width: 800px) {
+    .rdio-apps,
+    .rdio-bright-apps {
+        background-image: url(/site4/assets/images/caseStudy/rdio-assets/album-strip-2x.png)
+    }
+}
+.rdio-apps {
+    top: 8%;
+    bottom: 8%;
+    opacity: 0
+}
+.rdio-bright-apps {
+    height: 100%
+}
+.rdio-bright {
+    position: absolute;
+    overflow: hidden;
+    top: 8%;
+    bottom: 8%;
+    left: 38.63%;
+    right: 38.63%
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    .rdio-bright {
+        left: 69.6%;
+        right: 7.8%
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 800px) {
+    .rdio-bright {
+        left: 64.9%;
+        right: 12.5%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .rdio-bright {
+        left: 71.1%;
+        right: 7.8%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 800px) {
+    .rdio-bright {
+        left: 66.4%;
+        right: 12.4%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    .rdio-bright {
+        left: 65.3%;
+        right: 13.6%
+    }
+}
+.rdio-playhead {
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    transition-duration: 0s;
+    transition-timing-function: linear;
+    position: absolute;
+    width: 60%;
+    top: 61%;
+    left: 20%;
+    content: "";
+    opacity: 0
+}
+.rdio-playhead::after {
+    content: "";
+    top: 0;
+    position: absolute;
+    width: 11%;
+    padding-top: 11%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.rdio-playhead.end {
+    opacity: 1;
+    transition-duration: 3s, .2s;
+    transition-delay: 1s, 0s;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    .rdio-playhead {
+        top: 66.1%
+    }
+}
+.dragonage {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+.dragonage::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    height: 20%;
+    background: linear-gradient(0deg, #292a24, rgba(41, 42, 36, 0));
+    z-index: 1000000000
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    .dragonage::after {
+        display: none
+    }
+}
+#dragonage-canvas {
+    position: absolute
+}
+#createjs-canvas {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%
+}
+#atari_02,
+#atari_04,
+.atari_02_st,
+.atari_04_st {
+    color: #5d5d5d
+}
+#atari_02 .panel_heading,
+#atari_04 .panel_heading,
+.atari_02_st .panel_heading,
+.atari_04_st .panel_heading {
+    color: #e21a23
+}
+#atari_01 .panel_subheading,
+#atari_03 .panel_subheading,
+#atari_05 .panel_subheading,
+#atari_06 .panel_subheading,
+.atari_01_st .panel_subheading,
+.atari_03_st .panel_subheading,
+.atari_05_st .panel_subheading,
+.atari_06_st .panel_subheading {
+    color: #fff
+}
+#atari_01,
+.atari_01_st {
+    background-color: #010101
+}
+#atari_01 .panel_art,
+.atari_01_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_01 .panel_art,
+    .atari_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_01-l1-l1.jpg)
+    }
+}
+#atari_01 .panel_description,
+.atari_01_st .panel_description {
+    margin-bottom: 1rem
+}
+#atari_01 .panel_misc,
+.atari_01_st .panel_misc {
+    color: #aaa
+}
+#atari_02,
+.atari_02_st {
+    background-color: #efefef
+}
+#atari_02 .panel_art,
+.atari_02_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_02 .panel_art,
+    .atari_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_04-l1-l1.jpg)
+    }
+}
+#atari_03,
+.atari_03_st {
+    background-color: #010101
+}
+#atari_03 .panel_art,
+.atari_03_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_03 .panel_art,
+    .atari_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_02-l1-l1.jpg)
+    }
+}
+#atari_04,
+.atari_04_st {
+    background-color: #efefef
+}
+#atari_05,
+.atari_05_st {
+    background-color: #010101
+}
+#atari_05 .panel_art,
+.atari_05_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_05 .panel_art,
+    .atari_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_05-l1-l1.jpg)
+    }
+}
+#atari_06,
+.atari_06_st {
+    background-color: #010101
+}
+#atari_06 .panel_art,
+.atari_06_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_06 .panel_art,
+    .atari_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_06-l1-l1.jpg)
+    }
+}
+#atari_07,
+.atari_07_st {
+    background-color: #e21a23
+}
+#atari_07 .panel_art,
+.atari_07_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #atari_07 .panel_art,
+    .atari_07_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/atariArcade/aa_07-l1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_01 .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        white-space: nowrap
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-l1-l1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-l1-l1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-l1-l1.jpg)
+    }
+}
+#createjs_01 a,
+#createjs_02 a,
+#createjs_03 a,
+#createjs_04 a,
+#createjs_05 a,
+#home_02e a,
+.createjs_01_st a,
+.createjs_02_st a,
+.createjs_03_st a,
+.createjs_04_st a,
+.createjs_05_st a,
+.home_02e_st a {
+    white-space: nowrap;
+    font-weight: 700;
+    color: inherit
+}
+#createjs_05,
+.createjs_05_st {
+    background-color: #374252;
+    color: #fafcff
+}
+#createjs_05 .button-default,
+.createjs_05_st .button-default {
+    color: #fafcff
+}
+#createjs_03,
+#home_02e,
+.createjs_03_st,
+.home_02e_st {
+    color: #9ca6b3
+}
+#createjs_03 a,
+#home_02e a,
+.createjs_03_st a,
+.home_02e_st a {
+    color: #eceef4
+}
+#createjs_03 .button-default,
+#createjs_03 .panel_heading,
+#createjs_03 .panel_subheading,
+#home_02e .button-default,
+#home_02e .panel_heading,
+#home_02e .panel_subheading,
+.createjs_03_st .button-default,
+.createjs_03_st .panel_heading,
+.createjs_03_st .panel_subheading,
+.home_02e_st .button-default,
+.home_02e_st .panel_heading,
+.home_02e_st .panel_subheading {
+    color: #fafcff
+}
+#createjs_01,
+#createjs_04,
+.createjs_01_st,
+.createjs_04_st {
+    background-color: #fafcff;
+    color: #4c6575
+}
+#createjs_01 a,
+#createjs_04 a,
+.createjs_01_st a,
+.createjs_04_st a {
+    color: #405261
+}
+#createjs_01 .button-default,
+#createjs_01 .panel_heading,
+#createjs_01 .panel_subheading,
+#createjs_04 .button-default,
+#createjs_04 .panel_heading,
+#createjs_04 .panel_subheading,
+.createjs_01_st .button-default,
+.createjs_01_st .panel_heading,
+.createjs_01_st .panel_subheading,
+.createjs_04_st .button-default,
+.createjs_04_st .panel_heading,
+.createjs_04_st .panel_subheading {
+    color: #4c6575
+}
+#createjs_02,
+#createjs_02 .button-default,
+.createjs_02_st,
+.createjs_02_st .button-default {
+    color: #374252
+}
+#createjs_01,
+.createjs_01_st {
+    background-color: #f1f5f1
+}
+#createjs_01 .panel_art,
+.createjs_01_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/createjs/cjs_01-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #createjs_01 .panel_art,
+    .createjs_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_01-l1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_01,
+    #createjs_01 .button-default,
+    #createjs_01 .panel_heading,
+    #createjs_01 .panel_subheading,
+    .createjs_01_st,
+    .createjs_01_st .button-default,
+    .createjs_01_st .panel_heading,
+    .createjs_01_st .panel_subheading {
+        color: #374252
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 800px) {
+    #createjs_01,
+    #createjs_01 .button-default,
+    #createjs_01 .panel_heading,
+    #createjs_01 .panel_subheading,
+    .createjs_01_st,
+    .createjs_01_st .button-default,
+    .createjs_01_st .panel_heading,
+    .createjs_01_st .panel_subheading {
+        color: #4c6575
+    }
+}
+#createjs_02,
+.createjs_02_st {
+    background-color: #ffd214;
+    padding-top: 60%
+}
+#createjs_02 .createjs,
+.createjs_02_st .createjs {
+    background-color: #ffd214
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_02,
+    .createjs_02_st {
+        padding-top: 50%
+    }
+}
+#createjs_03,
+.createjs_03_st {
+    background-color: #1f3445
+}
+#createjs_03 .panel_art,
+.createjs_03_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/createjs/cjs_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #createjs_03 .panel_art,
+    .createjs_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_03-l1-l1.jpg)
+    }
+}
+#createjs_04 .panel_art,
+.createjs_04_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/createjs/cjs_04-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #createjs_04 .panel_art,
+    .createjs_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_04-l1-l1.jpg)
+    }
+}
+#createjs_05 .panel_art,
+.createjs_05_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/createjs/cjs_05-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #createjs_05 .panel_art,
+    .createjs_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_05-l1-l1.jpg)
+    }
+}
+#createjs_06,
+.createjs_06_st {
+    background-color: #1a1a1a;
+    color: #827e7e
+}
+#createjs_06 .panel_heading,
+#createjs_06 a,
+.createjs_06_st .panel_heading,
+.createjs_06_st a {
+    color: #e63030
+}
+#createjs_06 .panel_art,
+.createjs_06_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/createjs/cjs_06-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #createjs_06 .panel_art,
+    .createjs_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/createjs/cjs_06-l1-l1.jpg)
+    }
+}
+#home_01,
+.home_01_st {
+    background-color: #e5e6e9;
+    color: #535353
+}
+#home_01 .button-default,
+.home_01_st .button-default {
+    color: #1e1e1e
+}
+#home_01 .panel_art canvas,
+.home_01_st .panel_art canvas {
+    z-index: 0
+}
+#home_01 .panel_art::before,
+.home_01_st .panel_art::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(229, 230, 233, 0), #e5e6e9 60%);
+    height: 150%;
+    width: 100%;
+    top: 33%;
+    left: 0;
+    z-index: 3000;
+    -webkit-transform: translateZ(2000px) perspective(900px);
+    transform: translateZ(2000px) perspective(900px)
+}
+#home_02a,
+.home_02a_st {
+    background-color: #131414;
+    color: #fff
+}
+#home_02a .button-default,
+.home_02a_st .button-default {
+    color: #fff
+}
+#home_02a .panel_art,
+.home_02a_st .panel_art {
+    background-image: url(../../assets/images/home/h_02a-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_02a .panel_art,
+    .home_02a_st .panel_art {
+        background-image: url(../../assets/images/home/h_02a-l1-l1.jpg)
+    }
+}
+#home_02b,
+.home_02b_st {
+    background-color: #0053a0;
+    color: #fff
+}
+#home_02b .button-default,
+.home_02b_st .button-default {
+    color: #fff
+}
+#home_02b .button-default::before,
+.home_02b_st .button-default::before {
+    border-color: #fff
+}
+#home_02b .button_icon-arrow::after,
+#home_02b .button_icon-arrow::before,
+.home_02b_st .button_icon-arrow::after,
+.home_02b_st .button_icon-arrow::before {
+    background-color: #fff
+}
+#home_02b .panel_art,
+.home_02b_st .panel_art {
+    background-image: url(../../assets/images/home/h_02b-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_02b .panel_art,
+    .home_02b_st .panel_art {
+        background-image: url(../../assets/images/home/h_02b-l1-l1.jpg)
+    }
+}
+#home_02c,
+.home_02c_st {
+    background-color: #0d0d0d;
+    color: #fff
+}
+#home_02c .button-default,
+.home_02c_st .button-default {
+    color: #fff
+}
+#home_02c .button-default::before,
+.home_02c_st .button-default::before {
+    border-color: #fff
+}
+#home_02c .button_icon-arrow::after,
+#home_02c .button_icon-arrow::before,
+.home_02c_st .button_icon-arrow::after,
+.home_02c_st .button_icon-arrow::before {
+    background-color: #fff
+}
+#home_02c .panel_art,
+.home_02c_st .panel_art {
+    background-image: url(../../assets/images/home/h_02c-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_02c .panel_art,
+    .home_02c_st .panel_art {
+        background-image: url(../../assets/images/home/h_02c-l1-l1.jpg)
+    }
+}
+#home_02d,
+.home_02d_st {
+    background-color: #000;
+    color: #999
+}
+#home_02d .panel_heading,
+.home_02d_st .panel_heading {
+    color: #2eb4c3
+}
+#home_02d .button-default,
+.home_02d_st .button-default {
+    color: #fff
+}
+#home_02d .button-default::before,
+.home_02d_st .button-default::before {
+    border-color: #fff
+}
+#home_02d .button_icon-arrow::after,
+#home_02d .button_icon-arrow::before,
+.home_02d_st .button_icon-arrow::after,
+.home_02d_st .button_icon-arrow::before {
+    background-color: #fff
+}
+#home_02d .panel_art,
+.home_02d_st .panel_art {
+    background-image: url(../../assets/images/home/h_02d-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_02d .panel_art,
+    .home_02d_st .panel_art {
+        background-image: url(../../assets/images/home/h_02d-l1-l1.jpg)
+    }
+}
+#home_02e,
+.home_02e_st {
+    background-color: #405261
+}
+#home_02e .panel_art,
+.home_02e_st .panel_art {
+    background-image: url(../../assets/images/home/h_02e-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_02e .panel_art,
+    .home_02e_st .panel_art {
+        background-image: url(../../assets/images/home/h_02e-l1-l1.jpg)
+    }
+}
+#home_03,
+.home_03_st {
+    background-color: #dcdddf;
+    color: #535353
+}
+#home_03 .button-default,
+.home_03_st .button-default {
+    color: #1e1e1e
+}
+#home_03 .panel_art,
+.home_03_st .panel_art {
+    background-image: url(../../assets/images/home/h_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_03 .panel_art,
+    .home_03_st .panel_art {
+        background-image: url(../../assets/images/home/h_03-l1-l1.jpg)
+    }
+}
+#home_04,
+.home_04_st {
+    background-color: #1f1f1f;
+    color: #adadad
+}
+#home_04 .button-default,
+.home_04_st .button-default {
+    color: #fff
+}
+#home_04 .panel_art,
+.home_04_st .panel_art {
+    background-image: url(../../assets/images/home/h_04-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #home_04 .panel_art,
+    .home_04_st .panel_art {
+        background-image: url(../../assets/images/home/h_04-l1-l1.jpg)
+    }
+}
+#rdiofxos_01,
+#rdiofxos_01 .panel_heading,
+.rdiofxos_01_st,
+.rdiofxos_01_st .panel_heading {
+    color: #FFF
+}
+#rdiofxos_01 .panel_subheading,
+.rdiofxos_01_st .panel_subheading {
+    color: #00243d
+}
+#rdiofxos_02,
+.rdiofxos_02_st {
+    color: #FFF
+}
+#rdiofxos_02 .panel_heading,
+.rdiofxos_02_st .panel_heading {
+    color: #00243d
+}
+#rdiofxos_02 .panel_subheading,
+#rdiofxos_03,
+#rdiofxos_03 .panel_heading,
+#rdiofxos_03 .panel_subheading,
+#rdiofxos_04,
+#rdiofxos_04 .panel_heading,
+#rdiofxos_04 .panel_subheading,
+.rdiofxos_02_st .panel_subheading,
+.rdiofxos_03_st,
+.rdiofxos_03_st .panel_heading,
+.rdiofxos_03_st .panel_subheading,
+.rdiofxos_04_st,
+.rdiofxos_04_st .panel_heading,
+.rdiofxos_04_st .panel_subheading {
+    color: #FFF
+}
+#rdiofxos_01,
+.rdiofxos_01_st {
+    background: linear-gradient(180deg, #119cd8, #0053a0)
+}
+#rdiofxos_01 .panel_description,
+.rdiofxos_01_st .panel_description {
+    margin-bottom: 1rem
+}
+#rdiofxos_01 .panel_misc,
+.rdiofxos_01_st .panel_misc {
+    color: #119cd8
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_01 .panel_misc,
+    .rdiofxos_01_st .panel_misc {
+        white-space: nowrap
+    }
+}
+#rdiofxos_02,
+.rdiofxos_02_st {
+    background-color: #119cd8
+}
+#rdiofxos_02 .panel_art,
+.rdiofxos_02_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_02 .panel_art,
+    .rdiofxos_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_02-l1-l1.jpg)
+    }
+}
+#rdiofxos_03,
+.rdiofxos_03_st {
+    background-color: #131a20
+}
+#rdiofxos_03 .panel_art,
+.rdiofxos_03_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_03 .panel_art,
+    .rdiofxos_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_03-l1-l1.jpg)
+    }
+}
+#rdiofxos_04,
+.rdiofxos_04_st {
+    background-color: #5f5852
+}
+#rdiofxos_04 .panel_art,
+.rdiofxos_04_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #rdiofxos_04 .panel_art,
+    .rdiofxos_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/rdiofxos/rdiofxos_04-l1-l1.jpg)
+    }
+}
+#iss_01,
+#iss_01 .panel_heading,
+#iss_02,
+#iss_02 .panel_heading,
+#iss_03,
+#iss_03 .panel_heading,
+#iss_05,
+#iss_05 .panel_heading,
+#iss_06,
+#iss_06 .panel_heading,
+.iss_01_st,
+.iss_01_st .panel_heading,
+.iss_02_st,
+.iss_02_st .panel_heading,
+.iss_03_st,
+.iss_03_st .panel_heading,
+.iss_05_st,
+.iss_05_st .panel_heading,
+.iss_06_st,
+.iss_06_st .panel_heading {
+    color: #fff
+}
+#iss_01 .panel_subheading,
+#iss_02 .panel_subheading,
+#iss_03 .panel_subheading,
+#iss_05 .panel_subheading,
+#iss_06 .panel_subheading,
+.iss_01_st .panel_subheading,
+.iss_02_st .panel_subheading,
+.iss_03_st .panel_subheading,
+.iss_05_st .panel_subheading,
+.iss_06_st .panel_subheading {
+    color: #d9eb44
+}
+#iss_01,
+.iss_01_st {
+    background-color: #59645a
+}
+#iss_01 .panel_art,
+.iss_01_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #iss_01 .panel_art,
+    .iss_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_01-l1-l1.jpg)
+    }
+}
+#iss_01 .panel_misc,
+.iss_01_st .panel_misc {
+    color: #333
+}
+#iss_02,
+.iss_02_st {
+    background-color: #292A24
+}
+#iss_03,
+.iss_03_st {
+    background-color: #0c1013
+}
+#iss_03 .panel_heading,
+.iss_03_st .panel_heading {
+    color: #24c3e5
+}
+#iss_03 .panel_art,
+.iss_03_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #iss_03 .panel_art,
+    .iss_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_03-l1-l1.jpg)
+    }
+}
+#iss_04,
+.iss_04_st {
+    color: #2C2C2D;
+    background-color: #fff0d3
+}
+#iss_04 .panel_heading,
+.iss_04_st .panel_heading {
+    color: #4b227c
+}
+#iss_04 .panel_art,
+.iss_04_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #iss_04 .panel_art,
+    .iss_04_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_04-l1-l1.jpg)
+    }
+}
+#iss_05,
+.iss_05_st {
+    background-color: #064400
+}
+#iss_05 .panel_heading,
+.iss_05_st .panel_heading {
+    color: #a0c30e
+}
+#iss_05 .panel_art,
+.iss_05_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #iss_05 .panel_art,
+    .iss_05_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_05-l1-l1.jpg)
+    }
+}
+#iss_06,
+.iss_06_st {
+    background-color: #181714
+}
+#iss_06 .panel_heading,
+.iss_06_st .panel_heading {
+    color: #bc0900
+}
+#iss_06 .panel_art,
+.iss_06_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #iss_06 .panel_art,
+    .iss_06_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/iss/dragonageiss_06-l1-l1.jpg)
+    }
+}
+#technitone_01,
+.technitone_01_st {
+    background-color: #000;
+    color: #999
+}
+#technitone_01 .panel_heading,
+.technitone_01_st .panel_heading {
+    color: #FFF
+}
+#technitone_01 .panel_subheading,
+.technitone_01_st .panel_subheading {
+    color: #2eb4c3
+}
+#technitone_01 .button-default,
+.technitone_01_st .button-default {
+    color: #FFF
+}
+#technitone_01 .panel_art,
+.technitone_01_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_01-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_01 .panel_art,
+    .technitone_01_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_01-l1-l1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_01,
+    .technitone_01_st {
+        background-color: #000
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_01,
+    .technitone_01_st {
+        background-color: #000
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_01,
+    .technitone_01_st {
+        background-color: #000
+    }
+}
+#technitone_02,
+.technitone_02_st {
+    background-color: #2eb4c3;
+    color: #FFF
+}
+#technitone_02 .button-default,
+.technitone_02_st .button-default {
+    color: #FFF
+}
+#technitone_02 .panel_art,
+.technitone_02_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_02-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_02 .panel_art,
+    .technitone_02_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_02-l1-l1.jpg)
+    }
+}
+#technitone_03,
+.technitone_03_st {
+    background-color: #ca1d72;
+    color: #FFF
+}
+#technitone_03 .button-default,
+.technitone_03_st .button-default {
+    color: #FFF
+}
+#technitone_03 .panel_art,
+.technitone_03_st .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_03 .panel_art,
+    .technitone_03_st .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_03-l1-l1.jpg)
+    }
+}
+#technitone_04a,
+#technitone_04b,
+#technitone_04c,
+#technitone_04d,
+.technitone_04a_st,
+.technitone_04b_st,
+.technitone_04c_st,
+.technitone_04d_st {
+    background-color: #1a1a1a
+}
+#technitone_04a .panel_heading,
+#technitone_04a .panel_subheading,
+#technitone_04b .panel_heading,
+#technitone_04b .panel_subheading,
+#technitone_04c .panel_heading,
+#technitone_04c .panel_subheading,
+#technitone_04d .panel_heading,
+#technitone_04d .panel_subheading,
+.technitone_04a_st .panel_heading,
+.technitone_04a_st .panel_subheading,
+.technitone_04b_st .panel_heading,
+.technitone_04b_st .panel_subheading,
+.technitone_04c_st .panel_heading,
+.technitone_04c_st .panel_subheading,
+.technitone_04d_st .panel_heading,
+.technitone_04d_st .panel_subheading {
+    color: #FFF
+}
+#technitone_04a .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_04a-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_04a .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04a-l1-l1.jpg)
+    }
+}
+#technitone_04b .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_04b-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_04b .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04b-l1-l1.jpg)
+    }
+}
+#technitone_04c .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_04c-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_04c .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04c-l1-l1.jpg)
+    }
+}
+#technitone_04d .panel_art {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_04d-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_04d .panel_art {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_04d-l1-l1.jpg)
+    }
+}
+.technitrack {
+    display: inline-block;
+    width: 20%;
+    height: 0;
+    margin-right: 10px;
+    padding-top: 20%;
+    background-size: contain;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9)
+}
+.technitrack:hover {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+.technitrack[data-id=t1b3anz7ybd] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/t1b3anz7ybd.png)
+}
+.technitrack[data-id=q1dd9h8zjk4] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/q1dd9h8zjk4.png)
+}
+.technitrack[data-id=od9r71u4xsp] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/od9r71u4xsp.png)
+}
+.technitrack[data-id="57d9eae0gna"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/57d9eae0gna.png)
+}
+.technitrack[data-id="5o04dc1arrd"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/5o04dc1arrd.png)
+}
+.technitrack[data-id=bcbc4d9u89c] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/bcbc4d9u89c.png)
+}
+.technitrack[data-id=e7q1xg5wedg] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/e7q1xg5wedg.png)
+}
+.technitrack[data-id=nbdd5f7yfmt] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/nbdd5f7yfmt.png)
+}
+.technitrack[data-id="7xdxhbabdt4"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/7xdxhbabdt4.png)
+}
+.technitrack[data-id=cm4zdrbq222] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/cm4zdrbq222.png)
+}
+.technitrack[data-id=d01lnbadr5a] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/d01lnbadr5a.png)
+}
+.technitrack[data-id=pkb8c854hdg] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/pkb8c854hdg.png)
+}
+.technitrack[data-id="4jpd5rv7pjd"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/4jpd5rv7pjd.png)
+}
+.technitrack[data-id="5uc965hdgow"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/5uc965hdgow.png)
+}
+.technitrack[data-id="7l2odkb5x6t"] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/7l2odkb5x6t.png)
+}
+.technitrack[data-id=d4xm1t9338f] {
+    background-image: url(../../assets/images/caseStudy/technitone//tracks/d4xm1t9338f.png)
+}
+#technitone_05,
+.technitone_05_st {
+    padding-top: 60%;
+    background-color: #000;
+    color: #FFF
+}
+#technitone_05 .button-default,
+.technitone_05_st .button-default {
+    color: #FFF
+}
+#technitone_05 .panel_art::before,
+.technitone_05_st .panel_art::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: linear-gradient(180deg, transparent 33%, rgba(0, 0, 0, .33) 66%)
+}
+#technitone_05 .panel_art,
+#technitone_05 .techtngl,
+.technitone_05_st .panel_art,
+.technitone_05_st .techtngl {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+#technitone_05 .noWebGL,
+.technitone_05_st .noWebGL {
+    background-image: url(../../assets/images/caseStudy/technitone/gt_05-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #technitone_05 .noWebGL,
+    .technitone_05_st .noWebGL {
+        background-image: url(../../assets/images/caseStudy/technitone/gt_05-l1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #technitone_05,
+    .technitone_05_st {
+        padding-top: 60%
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #technitone_05,
+    .technitone_05_st {
+        padding-top: 50%
+    }
+}
+#about_01,
+#about_01 .panel_heading,
+#about_03,
+#about_03 .panel_heading,
+.about_01_st,
+.about_01_st .panel_heading,
+.about_03_st,
+.about_03_st .panel_heading {
+    color: #3c3c3c
+}
+#about_02,
+#about_02 .panel_heading,
+#about_04,
+#about_04 .panel_heading,
+.about_02_st,
+.about_02_st .panel_heading,
+.about_04_st,
+.about_04_st .panel_heading {
+    color: #f5f5f5
+}
+#atari_01,
+#atari_03,
+#atari_05,
+#atari_06,
+.atari_01_st,
+.atari_03_st,
+.atari_05_st,
+.atari_06_st {
+    color: #fff
+}
+#atari_01 .panel_heading,
+#atari_03 .panel_heading,
+#atari_05 .panel_heading,
+#atari_06 .panel_heading,
+.atari_01_st .panel_heading,
+.atari_03_st .panel_heading,
+.atari_05_st .panel_heading,
+.atari_06_st .panel_heading {
+    color: #e51b24
+}
+#atari_07,
+.atari_07_st {
+    color: #fff
+}
+#about_01,
+#about_03,
+.about_01_st,
+.about_03_st {
+    background-color: #fff
+}
+#about_03 .panel_art,
+.about_03_st .panel_art {
+    background-image: url(../../assets/images/aboutUs/au_01-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #about_03 .panel_art,
+    .about_03_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_01-l1-l1.jpg)
+    }
+}
+#about_02,
+.about_02_st {
+    background-color: #1e1e1e
+}
+#about_02 .panel_art,
+.about_02_st .panel_art {
+    background-image: url(../../assets/images/aboutUs/au_03-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #about_02 .panel_art,
+    .about_02_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_03-l1-l1.jpg)
+    }
+}
+#about_04,
+.about_04_st {
+    background-color: #1e1e1e
+}
+#about_04 .panel_art,
+.about_04_st .panel_art {
+    background-image: url(../../assets/images/aboutUs/au_02-p1-s1.jpg)
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-p1-m1.jpg)
+    }
+}
+@media screen and (max-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-p1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-s1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (-webkit-min-device-pixel-ratio: 1),
+(min--moz-min-device-pixel-ratio: 1),
+(-o-min-device-pixel-ratio: 1),
+(min-device-pixel-ratio: 1),
+(min-resolution: 1dppx) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-p1-s1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 540px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-s1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 3 / 4) and (min-width: 1024px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-s1-l1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-p1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 540px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-l1-m1.jpg)
+    }
+}
+@media screen and (min-aspect-ratio: 13 / 8) and (min-width: 1024px) {
+    #about_04 .panel_art,
+    .about_04_st .panel_art {
+        background-image: url(../../assets/images/aboutUs/au_02-l1-l1.jpg)
+    }
+}
+#statsWrap .stat p:first-of-type {
+    margin-bottom: 0;
+    color: #3c3c3c;
+    font-size: 8rem;
+    line-height: 80%;
+    letter-spacing: -4px;
+    text-align: center
+}
+@media screen and (min-width: 540px) {
+    #statsWrap .stat p:first-of-type {
+        font-size: 12rem;
+        line-height: 10rem
+    }
+}
+#statsWrap .stat p:last-of-type {
+    color: #3c3c3c;
+    text-transform: uppercase;
+    text-align: center
+}
+@media screen and (min-width: 540px) {
+    #statsWrap .stat p:last-of-type {
+        font-size: 2.4rem;
+        line-height: 2.4rem
+    }
+}
+#aboutPageView {
+    width: 100%;
+    background-color: #fff
+}
+#aboutPageView .section-content {
+    margin: 0 auto 6rem;
+    padding: 2rem 3rem 0
+}
+@media screen and (min-width: 540px) {
+    #aboutPageView .section-content {
+        margin: 0 auto 6rem;
+        padding-top: 8rem
+    }
+}
+#aboutPageView .section-content.panel {
+    background-color: #fff
+}
+#aboutPageView .section-content:last-child {
+    margin-bottom: 0
+}
+#aboutPageView [class*=logo-] {
+    fill: #3c3c3c
+}
+@media screen and (min-width: 540px) {
+    #aboutPageView {
+        padding-top: 0
+    }
+}
+#section-talks {
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    overflow: visible;
+    padding-top: 0
+}
+@media screen and (min-width: 540px) {
+    #section-talks {
+        height: 60rem
+    }
+}
+.bg-image-map {
+    width: 100%;
+    height: 100%;
+    max-width: 155rem;
+    background-image: url(../../assets/images/aboutUs/map-s1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .5
+}
+@media screen and (min-width: 1024px) {
+    .bg-image-map {
+        height: 150%;
+        background-size: 100%
+    }
+}
+#statsWrap {
+    width: 100%;
+    height: 8rem;
+    max-width: 80rem;
+    margin: 0 auto 4rem
+}
+#statsWrap .stat {
+    margin-right: 5%;
+    float: left
+}
+#statsWrap .stat:nth-of-type(3n+1),
+#statsWrap .stat:nth-of-type(3n+2),
+#statsWrap .stat:nth-of-type(3n+3) {
+    width: calc(33% - 3.33333%)
+}
+#statsWrap .stat:nth-of-type(3n+1) {
+    clear: both
+}
+#statsWrap .stat:nth-of-type(3n) {
+    display: block;
+    margin-right: 0
+}
+@media screen and (min-width: 540px) {
+    #statsWrap {
+        height: 10rem;
+        margin: 0 auto 8rem
+    }
+}
+#conferenceLogosWrap {
+    position: relative;
+    width: calc(100% - 6rem);
+    margin: 1rem auto 4rem;
+    height: 19rem;
+    min-width: 26rem;
+    max-width: 32rem
+}
+@media screen and (min-width: 400px) {
+    #conferenceLogosWrap {
+        min-width: 32rem
+    }
+}
+@media screen and (min-width: 540px) {
+    #conferenceLogosWrap {
+        height: 26rem;
+        max-width: 50rem
+    }
+}
+.logo-conference {
+    width: calc((100% / 3) - 4%);
+    margin-right: 5%;
+    float: left;
+    position: relative;
+    height: 6.5rem;
+    line-height: 100%
+}
+.logo-conference:nth-of-type(3n) {
+    display: block;
+    margin-right: 0
+}
+.logo-conference:nth-child(3n+1) {
+    text-align: left
+}
+.logo-conference:nth-child(3n+2) {
+    text-align: center
+}
+.logo-conference:nth-child(3n+3) {
+    text-align: right
+}
+@media screen and (min-width: 540px) {
+    .logo-conference {
+        height: 8rem
+    }
+}
+.logo-tedx {
+    width: 6.4rem;
+    height: 3.2rem
+}
+@media screen and (min-width: 540px) {
+    .logo-tedx {
+        width: 8.4rem;
+        height: 5.2rem
+    }
+}
+.logo-adobe-max {
+    width: 8rem;
+    height: 2rem
+}
+@media screen and (min-width: 540px) {
+    .logo-adobe-max {
+        width: 11rem;
+        height: 3rem
+    }
+}
+.logo-gdc {
+    width: 7.4rem;
+    height: 2.2rem
+}
+@media screen and (min-width: 540px) {
+    .logo-gdc {
+        width: 8.4rem;
+        height: 3.2rem
+    }
+}
+.logo-fitc {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-top: -20%
+}
+@media screen and (min-width: 540px) {
+    .logo-fitc {
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-top: -10%
+    }
+}
+.logo-sxsw {
+    width: 8.4rem;
+    height: 3.2rem
+}
+@media screen and (min-width: 540px) {
+    .logo-sxsw {
+        width: 13.4rem;
+        height: 5.2rem
+    }
+}
+.logo-pure-imagination {
+    width: 8.4rem;
+    height: 3rem
+}
+@media screen and (min-width: 540px) {
+    .logo-pure-imagination {
+        width: 13.4rem;
+        height: 5rem
+    }
+}
+.logo-reasons-creative {
+    width: 6.4rem;
+    height: 3.8rem
+}
+@media screen and (min-width: 540px) {
+    .logo-reasons-creative {
+        width: 11.4rem;
+        height: 4.8rem
+    }
+}
+.logo-appsworld {
+    width: 8.4rem;
+    height: 3rem
+}
+@media screen and (min-width: 540px) {
+    .logo-appsworld {
+        width: 13.4rem;
+        height: 4rem
+    }
+}
+.logo-codemotion {
+    width: 9.4rem;
+    height: 3rem
+}
+@media screen and (min-width: 540px) {
+    .logo-codemotion {
+        width: 14.4rem;
+        height: 4rem
+    }
+}
+#section-clients {
+    position: relative;
+    min-height: 90rem
+}
+@media screen and (min-width: 540px) {
+    #section-clients {
+        min-height: 75rem
+    }
+}
+#clientLogosWrap {
+    height: 68rem;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto
+}
+@media screen and (min-width: 540px) {
+    #clientLogosWrap {
+        max-width: 60rem;
+        height: 48.4rem
+    }
+}
+.image-client-logos {
+    height: 100%;
+    background-image: url(../../assets/images/aboutUs/client-logos-p1-s1.png);
+    background-size: 20.2rem 66.6rem;
+    background-position: center;
+    background-repeat: no-repeat
+}
+@media screen and (min-width: 540px) {
+    .image-client-logos {
+        background-image: url(../../assets/images/aboutUs/client-logos-s1.png);
+        background-size: 100%
+    }
+}
+.logo-client {
+    width: calc((100% / 4));
+    float: left;
+    height: 8rem;
+    text-align: center
+}
+.logo-client:nth-of-type(4n) {
+    display: block;
+    margin-right: 0
+}
+#errorPageView {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 55rem;
+    text-align: center;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%)
+}
+.errorPageHeading,
+.errorPageMessage {
+    margin-bottom: 2rem
+}
+#errorPageView .button-default {
+    white-space: nowrap
+}
+#errorPageView .button-default::before {
+    border-color: #3c3c3c
+}
+#errorPageView .button-default .button_icon-arrow::after,
+#errorPageView .button-default .button_icon-arrow::before {
+    background-color: #3c3c3c
+}
+#errorPageView~#footer {
+    display: none
+}
+.title {
+    font-family: verdana;
+    font-size: 2rem
+}
+.description {
+    font-family: verdana;
+    font-size: 1.5rem
+}
+.welcome {
+    font-family: Verdana;
+    color: #f0a;
+    font-size: 1rem
+}
